@@ -1,13 +1,14 @@
 @import 'config';
 @import 'menu';
+@import 'mobile';
 
 * {
     box-sizing: border-box;
 }
 
 body {
-    @include background();
-    background-color: $primary-color;
+    @include background;
+    background: $primary-color;
     color: #fff;
     height: 100%;
     margin: 0;
@@ -16,15 +17,14 @@ body {
 }
 
 // Headings
-
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     margin: 0;
     font-weight: 400;
-
     &.lg-heading {
         font-size: 6rem;
     }
-
     &.sm-heading {
         margin-bottom: 2rem;
         padding: 0.2rem 1rem;
@@ -50,20 +50,16 @@ header {
 main {
     padding: 4rem;
     height: 100%;
-
     .icons {
         margin-top: 1rem;
-
         a {
             padding: 0.4rem;
-
             &:hover {
                 color: $secondary-color;
                 @include easeOut();
             }
         }
     }
-
     &#home {
         overflow: hidden;
         h1 {

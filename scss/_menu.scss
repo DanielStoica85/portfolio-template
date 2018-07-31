@@ -40,11 +40,10 @@
     &.show {
         visibility: visible;
     }
-    .menu-branding,
-    .menu-nav {
+    &-branding,
+    &-nav {
         display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
+        flex-flow: column wrap;
         align-items: center;
         justify-content: center;
         float: left;
@@ -52,7 +51,7 @@
         height: 100vh;
         overflow: hidden;
     }
-    .menu-nav {
+    &-nav {
         margin: 0;
         padding: 0;
         background: darken($primary-color, 5);
@@ -64,7 +63,7 @@
             transform: translate3d(0, 0, 0);
         }
     } // Branding side
-    .menu-branding {
+    &-branding {
         background: $primary-color;
         transform: translate3d(0, 100%, 0);
         @include easeOut;
